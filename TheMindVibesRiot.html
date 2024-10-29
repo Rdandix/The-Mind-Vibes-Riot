@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Vibe Riot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <style>
+        /* Stili di base */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        /* Immagine di sfondo */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.imgur.com/Xp1zxvg.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            filter: blur(0px);
+        }
+
+        /* Sovrapposizione trasparente */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(50, 50, 50, 0.6);
+            z-index: -1;
+        }
+
+        /* Header e logo */
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .header img {
+            width: 300px;
+            border-radius: 75%;
+        }
+        .app-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
+            margin: 5px 0;
+        }
+        .app-subtitle {
+            font-size: 1.1em;
+            color: #fff;
+            margin-bottom: 3px;
+        }
+
+        /* Sezione principale per il feed e il menu */
+        .main-content {
+            width: 90%;
+            max-width: 600px;
+            margin: 55px 0;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Feed Motivazionale */
+        .feed-motivazionale {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+            color: white;
+            text-align: center;
+        }
+        .feed-motivazionale h2 {
+            font-size: 1.2em;
+        }
+        .feed-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Menu principale */
+        .menu-principale {
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .menu-principale button {
+            padding: 12px;
+            font-size: 1em;
+            border: none;
+            border-radius: 20px;
+            background-color: white;
+            color: darkgreen;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .menu-principale button:hover, .menu-principale button:focus {
+            background-color: #e6f2e6; /* Verde chiaro per l’hover */
+        }
+
+        /* Menu di navigazione in basso */
+        .nav-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(50, 50, 50, 0.7);
+            padding: 10px;
+            z-index: 1;
+        }
+        .nav-bar button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .nav-bar button:hover, .nav-bar button:focus {
+            color: rgba(200, 200, 200, 0.8);
+        }
+        .emergency-button {
+            font-size: 1.2em;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <div class="header">
+        <img src="https://i.imgur.com/IP0xU0k.png" alt="Logo Mental Vibe Riot">
+        <h1 class="app-title">The Mental Vibe Riot</h1>
+        <p class="app-subtitle">The app that Helps You with Mental Health Issues and Reduces Anxiety :)</p>
+        <p class="app-subtitle">Together, not alone, in mutual support: shared help is the key to well-beign!</p>
+    </div>
+
+    <div class="main-content">
+        <!-- Feed Motivazionale -->
+        <div class="feed-motivazionale">
+            <h2>Feed Motivazionale</h2>
+            <p>"Non smettere mai di credere in te stesso. Ogni giorno è una nuova opportunità per crescere."</p>
+            <img src="https://i.imgur.com/VdHhiIh.jpeg" class="feed-image">
+        </div>
+
+        <!-- Menu principale -->
+        <div class="menu-principale">
+            <button>Respirazioni</button>
+            <button>Oroscopo giornaliero</button>
+            <button>Questionario</button>
+            <button>Concentrazione mentale</button>
+            <button>Programma giornate</button>
+            <button>Rumori Bianchi</button>
+            <button>Minigames rilassanti</button>
+            <button>Salute</button>
+            <button>Minigames mentali</button>
+            <button>Bacheca anonima</button>
+        </div>
+    </div>
+
+    <!-- Barra di navigazione in basso -->
+    <div class="nav-bar">
+        <button>Home</button>
+        <button>Diario</button>
+        <button class="emergency-button">Emergency</button>
+        <button>Feed Utente</button>
+        <button>Utente</button>
+    </div>
+</body>
+</html>
